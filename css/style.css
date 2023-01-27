@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Poppins&display=swap');
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family:Arial, Helvetica, sans-serif;
+	}
+	body{
+		background-color:#f8f8f8 ;
+		background-size: 100vw 100vh;
+		background-repeat: no-repeat;
+        
+	}
+	.capa{
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background: rgba(255, 255, 255, 0.6);
+		z-index: -1;
+		top: 0;left: 0;
+        
+	}
+	/*Estilos para el encabezado*/
+	.header{
+		width: 100%;
+		height: 80px;
+		position: fixed;
+		top: 0;left: 0;
+        background-color: #232837;
+	}
+
+/*dropdown*/
+.dropdown-item{
+    position: relative;
+}
+
+.dropdown-item > a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.dropdown-item .menu2 {
+    display: none;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px rgb(0, 0, 0);
+    position: absolute;
+    min-width: 150px;
+}
+
+.dropdown-item:hover .menu2 {
+    display: block;
+}
+
+.dropdown-item .menu2 ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: left;
+}
+
+.dropdown-item .menu2 li a {
+    color: #000000;
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.dropdown-item .menu2 li a:hover {
+    background-color: #b3d5e0;
+    color: rgba(17, 17, 17, 0.801);
+}
+/*dropdown2*/
+	.container{
+		width: 90%;
+		max-width: 1200px;
+		margin: auto;
+	}
+	.container .btn-menu, .logo{
+		float: left;
+		line-height:100px;
+        
+	}
+	.container .btn-menu label{
+		color: rgb(255, 255, 255);
+		font-size: 25px;
+		cursor: pointer;
+	}
+	.logo h1{
+		color: #fff;
+		font-weight: 400;
+		font-size: 22px;
+		margin-left: 10px;
+	}
+	.container .menu{
+		float: right;
+		line-height: 100px;
+	}
+	.container .menu a{
+		display: inline-block;
+		padding: 15px;
+		line-height: normal;
+		text-decoration: none;
+		color: #fff;
+		transition: all 0.3s ease;
+		border-bottom: 2px solid transparent;
+		font-size: 15px;
+		margin-right: 5px;
+	}
+	.container .menu a:hover{
+		border-bottom: 2px solid #c7c7c7;
+		padding-bottom: 5px;
+	}
+	/*Fin de Estilos para el encabezado*/
+
+	/*Menù lateral*/
+	#btn-menu{
+		display: none;
+	}
+	.container-menu{
+		position: absolute;
+		background: rgba(0,0,0,0.5);
+		width: 100%;
+		height: 100vh;
+		top: 0;left: 0;
+		transition: all 500ms ease;
+		opacity: 0;
+		visibility: hidden;
+	}
+	#btn-menu:checked ~ .container-menu{
+		opacity: 2;
+		visibility: visible;
+	}
+	.cont-menu{
+		width: 100%;
+		max-width: 250px;
+		background: #ffffff;
+		height: 100vh;
+		position: relative;
+		transition: all 500ms ease;
+		transform: translateX(-100%);
+	}
+	#btn-menu:checked ~ .container-menu .cont-menu{
+		transform: translateX(0%);
+	}
+	.cont-menu nav{
+		transform: translateY(15%);
+	}
+	.cont-menu nav a{
+		display: block;
+		text-decoration: none;
+		padding: 20px;
+		color: #000000;
+		border-left: 5px solid transparent;
+		transition: all 400ms ease;
+	}
+	.cont-menu nav a:hover{
+		border-left: 5px solid #000000c0;
+		background: #b3d5e0;
+	}
+	.cont-menu label{
+		position: absolute;
+		right: 5px;
+		top: 10px;
+		color: rgb(0, 0, 0);
+		cursor: pointer;
+		font-size: 18px;
+	}
+	/*Fin de Menù lateral*/
+
+    /*Conductores A S*/
+
+    body {
+        font-family: monospace;
+    }
+    
+    .containerT {
+        width: 100%;
+        max-width: 1000px;
+        margin: auto;
+        
+    }
+    
+    .table {
+        width: 100%;
+        border: 1px solid #ccc;
+        border-collapse: collapse;
+        margin: 0;
+        padding: 0;
+        table-layout: fixed;
+        
+    }
+    
+    .table caption {
+        font-size: 28px;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: 8px 0px;
+    }
+    
+    .table tr {
+        background-color: #f8f8f8;
+        border: 1px solid rgba(3, 3, 3, 0.349);
+    }
+    
+    .table th, .table td {
+        font-size: 16px;
+        padding: 8px;
+        text-align: center;
+    }
+    
+    .table thead th{ 
+        text-transform: uppercase;
+        background-color: #ddd;
+    }
+    
+    .table tbody tr:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+    
+    .table tbody td:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    
+    @media screen and (max-width: 600px) {
+        .table {
+            border: 0px;
+        }
+        .table caption {
+            font-size: 22px;
+        }
+        .table thead {
+            display: none;
+        }
+        .table tr {
+            margin-bottom: 8px;
+            border-bottom: 4px solid #ddd;
+            display: block;
+        }
+        .table th, .table td {
+            font-size: 12px;
+        }
+        .table td {
+            display: block;
+            border-bottom: 1px solid #ddd;
+            text-align: right;
+        }
+        .table  td:last-child {
+            border-bottom: 0px;
+        }
+        .table td::before {
+            content: attr(data-label);
+            font-weight: bold;
+            text-transform: uppercase;
+            float: left;
+        }
+    }
+    
+
+	/*Solicitud*/
+
+  .contenedor_solicitudes{ 
+    gap: 6px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(445px, 1fr));
+  }
+
+  .solicitud_conductores{
+    margin: 2px;
+    border: solid 2px;
+    border-color: rgba(0, 0, 0, 0.651);
+    background-color: white;
+  }
+  
+  #tablas-soli{
+    color: rgba(34, 34, 34, 0.733);
+    justify-content: center;
+    text-align: center;
+    display: flex;
+  }
+  
+  #btn_aceptar{
+    cursor: pointer;
+    border: solid 2px;
+    border-radius: 15px;
+    color: rgb(0, 0, 0);
+  }
+  
+  #btn_rechazar{
+    cursor: pointer;
+    border: solid 2px;
+    border-radius: 15px;
+    color: rgb(0, 0, 0);
+  }
+  
+  .mas_datos{
+    color: rgb(5, 5, 5);
+  }
+  
+ 
+  
+  
+    
+
+    
